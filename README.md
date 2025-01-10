@@ -36,3 +36,47 @@ PORT=5000
 MONGO_URI=your_mongodb_connection_string
 ```
 Replace your_mongodb_connection_string with your actual MongoDB URI from MongoDB Atlas or your local MongoDB instance.
+
+### 4. Run the Application
+
+Run the application in development mode using:
+
+```bash
+npm run dev
+```
+
+# API Endpoints
+
+### 1. /api/stats?coin=bitcoin
+
+Fetch the latest stats for the requested cryptocurrency.
+
+Query Parameters:
+
+coin: The cryptocurrency name. Options: bitcoin, matic, ethereum.
+
+Sample Response:
+
+```bash
+{
+  "price": 40000,
+  "marketCap": 800000000,
+  "24hChange": 3.4
+}
+```
+
+### 2. /api/deviation?coin=bitcoin
+
+Fetch the standard deviation of the price for the last 100 records of the requested cryptocurrency.
+
+Query Parameters:
+
+coin: The cryptocurrency name. Options: bitcoin, matic, ethereum.
+
+Sample Response:
+
+```bash
+{
+  "deviation": 4082.48
+}
+```
